@@ -1,0 +1,21 @@
+spring:
+  profiles:
+    active: local
+  application:
+    name: image-host
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 100MB
+  elasticsearch:
+    rest:
+      uris: 10.4.201.199:9200
+minio:
+  endpoint: http://10.4.201.199:9000
+  access-key: 123456
+  secret-key: 12345678
+  bucket: public
+
+chunk:
+  bucket: chunk
+  expiry: 60000
